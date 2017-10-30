@@ -22,6 +22,7 @@ const devConfig = flowRight(
 export default devConfig({
   devtool: 'cheap-module-eval-source-map',
   devServer: {
+    host: "0.0.0.0",
     port: process.env.DEV_SERVER_PORT || 8080,
     contentBase: outputFolder
   }
