@@ -20,8 +20,8 @@ class MessageList extends React.Component {
         return(
           <div key={msg.id}>
             <p>Message {msg.id}: {msg.text}</p>
+            <small>Posted at: {msg.created_at}</small>
           </div>
-
         )
       })
       this.setState({ messages });
