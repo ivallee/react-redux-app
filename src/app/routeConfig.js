@@ -1,10 +1,8 @@
 import React from 'react';
 
 import App from './client/components/App.react';
+import Messages from './client/components/Messages.react';
 
-const Foo = ({ props }) => (
-  <div>foo</div>
-);
 
 export default [
   {
@@ -15,8 +13,8 @@ export default [
         Component: () => <div>Main</div>,
       },
       {
-        path: 'foo',
-        getComponent: Foo,
+        path: 'messages',
+        Component: Messages,
       },
     ],
   },

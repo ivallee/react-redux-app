@@ -9,8 +9,8 @@ function App(props) {
         <LinkItem to="/">
           Main
         </LinkItem>
-        <LinkItem to="/foo">
-          foo
+        <LinkItem to="/messages">
+          Messages
         </LinkItem>
       </ul>
       {props.children}
