@@ -15,6 +15,12 @@ export default [
       {
         path: 'messages',
         Component: MessageList,
+        children: [
+          {
+            path: ':id',
+            Component: () => <div>message/id!</div>,
+          }
+        ]
       },
     ],
   },

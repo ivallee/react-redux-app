@@ -21,6 +21,7 @@ class MessageList extends React.Component {
           <div key={msg.id}>
             <p>Message {msg.id}: {msg.text}</p>
           </div>
+
         )
       })
       this.setState({ messages });
