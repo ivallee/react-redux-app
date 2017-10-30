@@ -1,7 +1,7 @@
 import React from 'react';
 
 import App from './client/components/App.react';
-import Messages from './client/components/Messages.react';
+import MessageList from './client/components/MessageList.react';
 
 
 export default [
@@ -14,7 +14,7 @@ export default [
       },
       {
         path: 'messages',
-        Component: Messages,
+        Component: MessageList,
       },
     ],
   },
