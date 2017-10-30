@@ -11,14 +11,15 @@ class MessageList extends React.Component {
 
   componentDidMount() {
 
-    fetch('https://isaac-test-svz.herokuapp.com/messages/?format=json')
+    fetch('https://isaac-test-svz.herokuapp.com/messages')
     .then(results => {
-      return results;
+      return results.json();
     }).then(data => {
+      console.log(data.results);
       let messages = data.results.map((msg) => {
         return(
           <div key={msg.id}>
-            <div>{msg.text}</div>
+            <p>Message {msg.id}: {msg.text}</p>
           </div>
         )
       })
