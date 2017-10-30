@@ -12,21 +12,23 @@ class MessageList extends React.Component {
   componentDidMount() {
 
     fetch('https://isaac-test-svz.herokuapp.com/messages')
-    .then(results => {
-      return results.json();
-    }).then(data => {
-      console.log(data.results);
-      let messages = data.results.map((msg) => {
-        return(
-          <div key={msg.id}>
-            <p>Message {msg.id}: {msg.text}</p>
-            <small>Posted at: {msg.created_at}</small>
-          </div>
-        )
+      .then(results => {
+        return results.json();
+      }).then(data => {
+        console.log(data.results);
+        let messages = data.results.map((msg) => {
+          return (
+            <ul key={msg.id}>
+              <li>
+                <p>Message {msg.id}: {msg.text}</p>
+                <small>Posted at: {msg.created_at}</small>
+              </li>
+            </ul>
+          )
+        })
+        this.setState({ messages });
+        console.log("state", this.state.messages);
       })
-      this.setState({ messages });
-      console.log("state", this.state.messages);
-    })
 
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 import App from './client/components/App.react';
 import MessageList from './client/components/MessageList.react';
+import MessageDetail from './client/components/MessageDetail.react';
 
 
 export default [
@@ -18,7 +19,7 @@ export default [
         children: [
           {
             path: ':id',
-            Component: () => <div>message/id!</div>,
+            Component: MessageDetail,
           }
         ]
       },
